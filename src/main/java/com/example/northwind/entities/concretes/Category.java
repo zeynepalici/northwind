@@ -10,7 +10,7 @@ import javax.persistence.*;
 @Table(name = "categories")
 public class Category implements IEntity {
     @Id
-    @GeneratedValue(strategy = GenerationType.AUTO)
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name = "category_id")
     private int id;
     @Column(name = "category_name")
