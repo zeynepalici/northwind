@@ -1,0 +1,12 @@
+package com.example.northwind.dataAccess.abstracts;
+
+import com.example.northwind.entities.concretes.Product;
+import org.springframework.data.jpa.repository.JpaRepository;
+import org.springframework.data.jpa.repository.Query;
+
+import java.util.List;
+
+public interface ProductRepository extends JpaRepository<Product, Integer> {
+    List<Product> findAllByCategoryId(int categoryId);
+    Product findById(int productId);
+}
